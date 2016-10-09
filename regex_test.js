@@ -7,8 +7,8 @@ var user_regex_input = new RegExp('skip')
 
 //Function that determines if user has provided valid regex
 regexTest = function(match_array, skip_array, input) {
-    var match = 0;
-    var skip = 0;
+    var match = 0; //this variable tracks the number of match errors
+    var skip = 0; //this variable tracks the number of skip errors
     for (var x = 0, y = match_array.length; x < y; x++) {
         if (input.test(match_array[x]) == false) {
             match += 1;
