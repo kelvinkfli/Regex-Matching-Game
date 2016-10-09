@@ -29,3 +29,22 @@ regexTest = function(match_array, skip_array, input) {
 }
 
 regexTest(strings_to_match, strings_to_skip, user_regex_input);
+
+
+--------------------------------------------------Scoring Logic-------------------------------------------------
+// <input type=text" id="regex" onkeydown="score_calc" placeholder="Type here..."> <-- form area user will type in
+
+var previous_length = 0; //this variable starts my comparison at 0 characters
+var points = 1000; //this variable holds the final score for the user after changes
+
+//this function initiates after every key press
+score_calc = function() {
+    var regex_input = document.getElementById('regex').split(''); //split user's input into an array of letters
+    var current_length = regex_input.length; //this variable will equal the input length
+    if (current_length > previous_length) { //if user has typed a character, decrease points by 10
+        points -= 10; 
+    } else if (current_length < previous_length) { //if user has removed a character, increase points by 5
+        points += 5;
+    }
+    previous_length = current_length; //give previous_length a new value = current_length so tracking can start over
+}    
