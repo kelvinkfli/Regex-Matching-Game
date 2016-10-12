@@ -5,7 +5,7 @@ var strings_to_skip = ['skip1', 'skip2', 'skip3'];
 //The regex input that the user will provide
 var user_regex_input = new RegExp('skip')
 
-//Function that determines if user has provided valid regex
+//Function that runs on submit: determines if regex is valid, and shows how many/what kinds of errors were made
 regexTest = function(match_array, skip_array, input) {
     var match = 0; //this variable tracks the number of match errors
     var skip = 0; //this variable tracks the number of skip errors
