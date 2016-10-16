@@ -3,9 +3,9 @@ var strings_to_match = ['str1', 'str2', 'str3'];
 var strings_to_skip = ['skip1', 'skip2', 'skip3'];
 
 //The regex input that the user will provide
-var user_regex_input = new RegExp('skip')
+var user_regex_input = new RegExp('str')
 
-//Function that runs on submit: determines if regex is valid, and shows how many/what kinds of errors were made
+//Function that determines if user has provided valid regex, this happens on SUBMIT
 regexTest = function(match_array, skip_array, input) {
     var match = 0; //this variable tracks the number of match errors
     var skip = 0; //this variable tracks the number of skip errors
@@ -59,4 +59,12 @@ score_calc = function() {
     previous_length = current_length; //give previous_length a new value = current_length so tracking can start over
 }
 
-/* add timer to decrease score + deductions for leaving browser */
+/*
+-add timer to decrease score + deductions for leaving browser
+-add a cheatsheet
+-decrease score for looking at solution/cheat sheet
+
+-local scoreboard
+
+
+ */
